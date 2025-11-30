@@ -1,0 +1,33 @@
+[project]
+name = "makanaki"
+version = "0.1.0"
+description = "Meteoblue API client and weather agent"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.0",
+    "python-dotenv>=1.0.0",
+    "google-adk>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["api"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["api/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+]
