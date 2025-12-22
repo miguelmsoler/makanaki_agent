@@ -1,6 +1,6 @@
 # Makanaki - Weather Agent powered by Meteoblue API
 
-An intelligent weather agent built with Google ADK that provides detailed weather forecasts using the Meteoblue API.
+An educational demo built with Google ADK that demonstrates agent capabilities using the Meteoblue API for weather data.
 
 ## 🌟 Features
 
